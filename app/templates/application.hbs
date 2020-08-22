@@ -1,5 +1,67 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="layout-row layout-xs-column">
+  <div class="layout-column flex-xs flex-gt-xs-50">
+    <PaperCard as |card|>
+      <card.title as |title|>
+        <title.text as |text|>
+          <text.headline>Card with image</text.headline>
+          <text.subhead>Large</text.subhead>
+        </title.text>
+        <title.media @size="lg" @src="tomster-9918e85a7f1a28c78b484c34cbe88579.png" @alt="Tomster" @title="Tomster" />
+      </card.title>
+      <card.actions>
+        <PaperButton>Action 1</PaperButton>
+        <PaperButton>Action 2</PaperButton>
+      </card.actions>
+    </PaperCard>
 
-{{outlet}}
+    <PaperCard as |card|>
+      <card.title as |title|>
+        <title.text as |text|>
+          <text.headline>Card with block</text.headline>
+          <text.subhead>Extra large</text.subhead>
+        </title.text>
+      </card.title>
+      <card.content @class="layout-row layout-align-space-between">
+        <card.media @size="xl">
+          <div class="card-media"></div>
+        </card.media>
+        <card.actions @class="layout-column">
+          <PaperButton @iconButton={{true}}>{{paper-icon "favorite"}}</PaperButton>
+          <PaperButton @iconButton={{true}}>{{paper-icon "settings"}}</PaperButton>
+          <PaperButton @iconButton={{true}}>{{paper-icon "share"}}</PaperButton>
+        </card.actions>
+      </card.content>
+    </PaperCard>
+  </div>
+  <div class="layout-column flex-xs flex-gt-xs-50">
+    <PaperCard as |card|>
+      <card.title as |title|>
+        <title.text as |text|>
+          <text.headline>Card with image</text.headline>
+          <text.subhead>Small</text.subhead>
+        </title.text>
+        <title.media @size="sm" @src="tomster-9918e85a7f1a28c78b484c34cbe88579.png" @alt="Tomster" @title="Tomster" />
+      </card.title>
+      <card.actions>
+        <PaperButton>Action 1</PaperButton>
+        <PaperButton>Action 2</PaperButton>
+      </card.actions>
+    </PaperCard>
+
+    <PaperCard as |card|>
+      <card.title as |title|>
+        <title.text as |text|>
+          <text.headline>Card with block</text.headline>
+          <text.subhead>Medium</text.subhead>
+        </title.text>
+        <title.media @size="md">
+          <div class="card-media"></div>
+        </title.media>
+      </card.title>
+      <card.actions>
+        <PaperButton>Action 1</PaperButton>
+        <PaperButton>Action 2</PaperButton>
+      </card.actions>
+    </PaperCard>
+  </div>
+</div>
